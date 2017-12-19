@@ -5,7 +5,7 @@
 //
 
 let app = {
-    URL: 'http://api.themoviedb.org/3/',
+    URL: 'https://api.themoviedb.org/3/',
     imgURL: '',
     baseURL: '',
     posterSizes: '',
@@ -47,7 +47,8 @@ let app = {
         fetch(url)
             .then( response => response.json() )
             .then( data => {
-                            baseURL = data.images.base_url;
+                         //   baseURL = data.images.base_url;
+                            baseURL = data.images.secure_base_url;
                             posterSizes = data.images.poster_sizes;
                            })
             .catch( err => {console.log(err);})         
