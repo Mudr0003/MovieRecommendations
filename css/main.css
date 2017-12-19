@@ -1,0 +1,153 @@
+@import "https://fonts.googleapis.com/css?family=Lato|Roboto+Slab";
+
+/* defaults
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+h1,h2,h3,h4 {
+    font-family: "Roboto Slab", "Times New Roman", Times, serif;
+}
+
+/*layout
+*/
+
+.page{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color:azure;
+    transform: translateX(-200%);
+    transition:  all 0.5s ease;   
+}
+
+.page.active{
+    display:block;
+    transform: translateX(0);  
+}
+
+.not {
+    display:none;
+}
+
+.attribution {
+    padding-top: 1rem;
+    text-align: right; 
+}
+
+.attribution img {
+    animation-name:size;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+
+@keyframes size {
+    from { transform:scale(0.5); }
+    to { transform:scale(0.6); }
+}
+
+
+/* search bar
+*/
+
+.search{
+    position:fixed;
+    height: 3rem;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    
+    border-bottom: : 1px solid #333;
+    box-shadow: 0 2px 4px #000;
+}
+
+#search-button{
+    position:absolute;
+    z-index: 120;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color:dedede;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+#search-input {
+    position:static;
+    z-index: 110;
+    top:0;
+    width:75%;
+    height: 3rem;
+    padding-left: : 5rem;
+    font-size: 1.8rem;    
+}
+
+
+/* search results
+*/
+
+.movie {
+    border: 3px solid darkblue;
+    padding: 1rem;
+    overflow:auto;
+    clear: both;
+    box-shadow: 10px 10px lightblue;
+    margin: 50px;
+}
+
+.poster {
+    float:left;
+    background-color: #ddd;
+    width: 170px;
+    height:auto;
+    min-height: 160px;
+    margin: 0 1rem 1rem 0;
+    box-shadow: 10px 10px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.movie-title{
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    color: darkblue;
+}
+
+.movie-desc{
+    font-size: 1rem;
+    color: royalblue;  
+}
+
+.movie-other{
+    padding-top: 1rem;
+    font-size: 1rem;
+    color: royalblue;  
+}
+
+.movie-link{
+    padding-top: 1rem;
+    text-align: center;
+    transform: scale(0.5);
+}
+
+
+
+
+
+

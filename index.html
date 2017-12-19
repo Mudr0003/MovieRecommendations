@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Robin's Movie Recommendations</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico">
+</head>
+<body>
+    <main>
+        <header class="search">
+            <img id="back-button" data-src="./img/caret.svg" class="iconic iconic-md" data-direction="left" alt="Back Button" title="Back"/>
+            <img id="search-button" class="iconic iconic-md" data-src="./img/magnifying-glass.svg" alt="Search Button" title="Search"/>
+            <input type="text" id="search-input" placeholder="search" />
+        </header>
+        
+        <div class="page active" id="first-search">
+            <section class="title">Welcome to...</section>
+            
+            <section class="content"></section>
+            <div class="home">   
+              <br>
+              <h1>Robin's Movie Recommendations</h1>
+              <p clsss="welcome">
+                Enter a word from your favorite movie title in the search bar and I'll find your movie!
+              </p>    
+            </div>    
+                
+            <div class="attribution">
+              <img src="./img/408x161-powered-by-rectangle-green.png" alt="Powered by The Movie Database" />
+            </div>        
+        </div>
+        
+        <div class="page" id="search-results">
+            <section class="title">You've got Movies! Now click on the link to find other recommendations...</section>
+            
+            <section class="content">
+                <div class="movie">
+                  <!--  empty div where the js movie card will go -->
+                </div>   
+            </section>
+            
+            <div class="attribution">
+              <img src="./img/408x161-powered-by-rectangle-green.png" alt="Powered by The Movie Database" />
+            </div>
+        </div>
+        
+        <div class="page" id="recommend-results">
+            <section class="title">You've got movie Recommendations!</section>
+           
+            <section class="content">
+                <div class="movie">
+                   
+                  <!--  empty div where the js movie card will go -->
+                     
+                </div>  
+                  
+            </section>
+            
+            <div class="attribution">
+              <img src="./img/408x161-powered-by-rectangle-green.png" alt="Powered by The Movie Database" />
+           </div> 
+        </div>
+        
+    </main>
+    
+    <div class="loading not">
+        <img class="iconic" data-src="./img/loop-circular.svg" alt="waiting to load..." title="loop circular"/>
+    </div>
+     
+    <script src="./js/iconic.min.js"></script>
+    <script src="./js/key.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
